@@ -1,0 +1,551 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "DMX Mini Controler"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_POT RV1
+U 1 1 607E301E
+P 6500 3000
+F 0 "RV1" V 6385 3000 50  0000 C CNN
+F 1 "Volume" V 6294 3000 50  0000 C CNN
+F 2 "" H 6500 3000 50  0001 C CNN
+F 3 "~" H 6500 3000 50  0001 C CNN
+	1    6500 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 60806D37
+P 4500 2600
+F 0 "#PWR06" H 4500 2350 50  0001 C CNN
+F 1 "GND" H 4505 2427 50  0000 C CNN
+F 2 "" H 4500 2600 50  0001 C CNN
+F 3 "" H 4500 2600 50  0001 C CNN
+	1    4500 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR018
+U 1 1 60807014
+P 6650 3000
+F 0 "#PWR018" H 6650 2850 50  0001 C CNN
+F 1 "+5V" H 6665 3173 50  0000 C CNN
+F 2 "" H 6650 3000 50  0001 C CNN
+F 3 "" H 6650 3000 50  0001 C CNN
+	1    6650 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6086B4FF
+P 4650 2600
+F 0 "R1" V 4443 2600 50  0000 C CNN
+F 1 "R_PullDown" V 4534 2600 50  0000 C CNN
+F 2 "" V 4580 2600 50  0001 C CNN
+F 3 "~" H 4650 2600 50  0001 C CNN
+	1    4650 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 60872E48
+P 6350 3000
+F 0 "#PWR016" H 6350 2750 50  0001 C CNN
+F 1 "GND" H 6355 2827 50  0000 C CNN
+F 2 "" H 6350 3000 50  0001 C CNN
+F 3 "" H 6350 3000 50  0001 C CNN
+	1    6350 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR011
+U 1 1 60878708
+P 5400 2600
+F 0 "#PWR011" H 5400 2450 50  0001 C CNN
+F 1 "+5V" H 5415 2773 50  0000 C CNN
+F 2 "" H 5400 2600 50  0001 C CNN
+F 3 "" H 5400 2600 50  0001 C CNN
+	1    5400 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L MCU_Module:Arduino_Nano_v3.x U3
+U 1 1 60942262
+P 8300 3900
+F 0 "U3" H 8300 2811 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 8300 2720 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 8300 3900 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 8300 3900 50  0001 C CNN
+	1    8300 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Display_Character:RC1602A U2
+U 1 1 609492C0
+P 6500 4300
+F 0 "U2" H 6500 5181 50  0000 C CNN
+F 1 "LCD" H 6500 5090 50  0000 C CNN
+F 2 "Display:RC1602A" H 6600 3500 50  0001 C CNN
+F 3 "http://www.raystar-optronics.com/down.php?ProID=18" H 6600 4200 50  0001 C CNN
+	1    6500 4300
+	1    0    0    -1  
+$EndComp
+Text GLabel 4800 2300 0    50   Output ~ 0
+SW_Ch++
+Text GLabel 7800 3900 0    50   Input ~ 0
+SW_Ch++
+Text GLabel 7800 3800 0    50   Input ~ 0
+SW_Ch+
+Text GLabel 7800 3700 0    50   Input ~ 0
+SW_Ch-
+Text GLabel 7800 3600 0    50   Input ~ 0
+SW_Ch--
+Wire Wire Line
+	5000 2600 4900 2600
+Wire Wire Line
+	4900 2600 4900 2300
+Wire Wire Line
+	4800 2300 4900 2300
+Wire Wire Line
+	4800 2600 4900 2600
+Connection ~ 4900 2600
+Text GLabel 7800 4500 0    50   Output ~ 0
+LCD_D4
+Text GLabel 7800 4400 0    50   Output ~ 0
+LCD_D5
+Text GLabel 7800 4300 0    50   Output ~ 0
+LCD_D6
+Text GLabel 7800 4200 0    50   Output ~ 0
+LCD_D7
+Text GLabel 7800 4100 0    50   Output ~ 0
+LCD_RS
+Text GLabel 7800 4000 0    50   Output ~ 0
+LCD_E
+Text GLabel 6100 4500 0    50   Input ~ 0
+LCD_D4
+Text GLabel 6100 4600 0    50   Input ~ 0
+LCD_D5
+Text GLabel 6100 4700 0    50   Input ~ 0
+LCD_D6
+Text GLabel 6100 4800 0    50   Input ~ 0
+LCD_D7
+Text GLabel 6100 3800 0    50   Input ~ 0
+LCD_RS
+Text GLabel 6100 4000 0    50   Input ~ 0
+LCD_E
+$Comp
+L power:+5V #PWR020
+U 1 1 609CB70F
+P 6900 4600
+F 0 "#PWR020" H 6900 4450 50  0001 C CNN
+F 1 "+5V" V 6915 4728 50  0000 L CNN
+F 2 "" H 6900 4600 50  0001 C CNN
+F 3 "" H 6900 4600 50  0001 C CNN
+	1    6900 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 609CBBE6
+P 6900 4500
+F 0 "#PWR019" H 6900 4250 50  0001 C CNN
+F 1 "GND" V 6905 4372 50  0000 R CNN
+F 2 "" H 6900 4500 50  0001 C CNN
+F 3 "" H 6900 4500 50  0001 C CNN
+	1    6900 4500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6500 5000 7200 5000
+Wire Wire Line
+	7200 5000 7200 4100
+Wire Wire Line
+	7200 4100 6900 4100
+$Comp
+L power:+5V #PWR017
+U 1 1 609D0B38
+P 6500 3600
+F 0 "#PWR017" H 6500 3450 50  0001 C CNN
+F 1 "+5V" V 6515 3728 50  0000 L CNN
+F 2 "" H 6500 3600 50  0001 C CNN
+F 3 "" H 6500 3600 50  0001 C CNN
+	1    6500 3600
+	0    1    1    0   
+$EndComp
+Text GLabel 8800 3900 2    50   Input ~ 0
+Volume
+Text GLabel 6400 2700 0    50   Output ~ 0
+Volume
+Wire Wire Line
+	6500 2850 6500 2700
+Wire Wire Line
+	6500 2700 6400 2700
+$Comp
+L Switch:SW_MEC_5E SW1
+U 1 1 607E2500
+P 5200 2700
+F 0 "SW1" H 5200 3085 50  0000 C CNN
+F 1 "SW_Ch++" H 5200 2994 50  0000 C CNN
+F 2 "" H 5200 3000 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 5200 3000 50  0001 C CNN
+	1    5200 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 609FB94E
+P 4500 3300
+F 0 "#PWR07" H 4500 3050 50  0001 C CNN
+F 1 "GND" H 4505 3127 50  0000 C CNN
+F 2 "" H 4500 3300 50  0001 C CNN
+F 3 "" H 4500 3300 50  0001 C CNN
+	1    4500 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 609FB954
+P 4650 3300
+F 0 "R2" V 4443 3300 50  0000 C CNN
+F 1 "R_PullDown" V 4534 3300 50  0000 C CNN
+F 2 "" V 4580 3300 50  0001 C CNN
+F 3 "~" H 4650 3300 50  0001 C CNN
+	1    4650 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR012
+U 1 1 609FB95A
+P 5400 3300
+F 0 "#PWR012" H 5400 3150 50  0001 C CNN
+F 1 "+5V" H 5415 3473 50  0000 C CNN
+F 2 "" H 5400 3300 50  0001 C CNN
+F 3 "" H 5400 3300 50  0001 C CNN
+	1    5400 3300
+	0    1    1    0   
+$EndComp
+Text GLabel 4800 3000 0    50   Output ~ 0
+SW_Ch+
+Wire Wire Line
+	5000 3300 4900 3300
+Wire Wire Line
+	4900 3300 4900 3000
+Wire Wire Line
+	4800 3000 4900 3000
+Wire Wire Line
+	4800 3300 4900 3300
+Connection ~ 4900 3300
+$Comp
+L Switch:SW_MEC_5E SW2
+U 1 1 609FB966
+P 5200 3400
+F 0 "SW2" H 5200 3785 50  0000 C CNN
+F 1 "SW_Ch+" H 5200 3694 50  0000 C CNN
+F 2 "" H 5200 3700 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 5200 3700 50  0001 C CNN
+	1    5200 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 609FDDF4
+P 4500 4000
+F 0 "#PWR08" H 4500 3750 50  0001 C CNN
+F 1 "GND" H 4505 3827 50  0000 C CNN
+F 2 "" H 4500 4000 50  0001 C CNN
+F 3 "" H 4500 4000 50  0001 C CNN
+	1    4500 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 609FDDFA
+P 4650 4000
+F 0 "R3" V 4443 4000 50  0000 C CNN
+F 1 "R_PullDown" V 4534 4000 50  0000 C CNN
+F 2 "" V 4580 4000 50  0001 C CNN
+F 3 "~" H 4650 4000 50  0001 C CNN
+	1    4650 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR013
+U 1 1 609FDE00
+P 5400 4000
+F 0 "#PWR013" H 5400 3850 50  0001 C CNN
+F 1 "+5V" H 5415 4173 50  0000 C CNN
+F 2 "" H 5400 4000 50  0001 C CNN
+F 3 "" H 5400 4000 50  0001 C CNN
+	1    5400 4000
+	0    1    1    0   
+$EndComp
+Text GLabel 4800 3700 0    50   Output ~ 0
+SW_Ch-
+Wire Wire Line
+	5000 4000 4900 4000
+Wire Wire Line
+	4900 4000 4900 3700
+Wire Wire Line
+	4800 3700 4900 3700
+Wire Wire Line
+	4800 4000 4900 4000
+Connection ~ 4900 4000
+$Comp
+L Switch:SW_MEC_5E SW3
+U 1 1 609FDE0C
+P 5200 4100
+F 0 "SW3" H 5200 4485 50  0000 C CNN
+F 1 "SW_Ch-" H 5200 4394 50  0000 C CNN
+F 2 "" H 5200 4400 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 5200 4400 50  0001 C CNN
+	1    5200 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 60A00B86
+P 4500 4700
+F 0 "#PWR09" H 4500 4450 50  0001 C CNN
+F 1 "GND" H 4505 4527 50  0000 C CNN
+F 2 "" H 4500 4700 50  0001 C CNN
+F 3 "" H 4500 4700 50  0001 C CNN
+	1    4500 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60A00B8C
+P 4650 4700
+F 0 "R4" V 4443 4700 50  0000 C CNN
+F 1 "R_PullDown" V 4534 4700 50  0000 C CNN
+F 2 "" V 4580 4700 50  0001 C CNN
+F 3 "~" H 4650 4700 50  0001 C CNN
+	1    4650 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR014
+U 1 1 60A00B92
+P 5400 4700
+F 0 "#PWR014" H 5400 4550 50  0001 C CNN
+F 1 "+5V" H 5415 4873 50  0000 C CNN
+F 2 "" H 5400 4700 50  0001 C CNN
+F 3 "" H 5400 4700 50  0001 C CNN
+	1    5400 4700
+	0    1    1    0   
+$EndComp
+Text GLabel 4800 4400 0    50   Output ~ 0
+SW_Ch--
+Wire Wire Line
+	5000 4700 4900 4700
+Wire Wire Line
+	4900 4700 4900 4400
+Wire Wire Line
+	4800 4400 4900 4400
+Wire Wire Line
+	4800 4700 4900 4700
+Connection ~ 4900 4700
+$Comp
+L Switch:SW_MEC_5E SW4
+U 1 1 60A00B9E
+P 5200 4800
+F 0 "SW4" H 5200 5185 50  0000 C CNN
+F 1 "SW_Ch--" H 5200 5094 50  0000 C CNN
+F 2 "" H 5200 5100 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 5200 5100 50  0001 C CNN
+	1    5200 4800
+	1    0    0    -1  
+$EndComp
+Text GLabel 7800 3400 0    50   Output ~ 0
+Serial_Sig
+$Comp
+L Connector:XLR3 J1
+U 1 1 60958E29
+P 3400 4500
+F 0 "J1" H 3400 4865 50  0000 C CNN
+F 1 "XLR3" H 3400 4774 50  0000 C CNN
+F 2 "" H 3400 4500 50  0001 C CNN
+F 3 " ~" H 3400 4500 50  0001 C CNN
+	1    3400 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 6095B32F
+P 3100 4500
+F 0 "#PWR03" H 3100 4250 50  0001 C CNN
+F 1 "GND" H 3105 4327 50  0000 C CNN
+F 2 "" H 3100 4500 50  0001 C CNN
+F 3 "" H 3100 4500 50  0001 C CNN
+	1    3100 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 3700 4800 2    50   Input ~ 0
+DMX_Sig
+Text GLabel 3700 4500 2    50   Input ~ 0
+DMX_SigInv
+Wire Wire Line
+	3700 4800 3400 4800
+$Comp
+L Interface_UART:SN75176AP U1
+U 1 1 6095EFD6
+P 3400 3300
+F 0 "U1" H 3400 3881 50  0000 C CNN
+F 1 "SN75176AP" H 3400 3790 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 3400 2800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn75176a.pdf" H 5000 3100 50  0001 C CNN
+	1    3400 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 60965669
+P 3400 3700
+F 0 "#PWR05" H 3400 3450 50  0001 C CNN
+F 1 "GND" H 3405 3527 50  0000 C CNN
+F 2 "" H 3400 3700 50  0001 C CNN
+F 3 "" H 3400 3700 50  0001 C CNN
+	1    3400 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 60966081
+P 3100 3400
+F 0 "#PWR02" H 3100 3150 50  0001 C CNN
+F 1 "GND" V 3105 3272 50  0000 R CNN
+F 2 "" H 3100 3400 50  0001 C CNN
+F 3 "" H 3100 3400 50  0001 C CNN
+	1    3100 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 609664D8
+P 3400 2900
+F 0 "#PWR04" H 3400 2750 50  0001 C CNN
+F 1 "+5V" V 3415 3028 50  0000 L CNN
+F 2 "" H 3400 2900 50  0001 C CNN
+F 3 "" H 3400 2900 50  0001 C CNN
+	1    3400 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 60966B5B
+P 3100 3100
+F 0 "#PWR01" H 3100 2950 50  0001 C CNN
+F 1 "+5V" H 3115 3273 50  0000 C CNN
+F 2 "" H 3100 3100 50  0001 C CNN
+F 3 "" H 3100 3100 50  0001 C CNN
+	1    3100 3100
+	1    0    0    -1  
+$EndComp
+Text GLabel 3700 3500 2    50   Output ~ 0
+DMX_Sig
+Text GLabel 3700 3400 2    50   Output ~ 0
+DMX_SigInv
+Text GLabel 3100 3200 0    50   Input ~ 0
+Serial_Sig
+$Comp
+L power:+5V #PWR022
+U 1 1 60956682
+P 8500 2900
+F 0 "#PWR022" H 8500 2750 50  0001 C CNN
+F 1 "+5V" H 8515 3073 50  0000 C CNN
+F 2 "" H 8500 2900 50  0001 C CNN
+F 3 "" H 8500 2900 50  0001 C CNN
+	1    8500 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 6095734D
+P 8400 4900
+F 0 "#PWR021" H 8400 4650 50  0001 C CNN
+F 1 "GND" V 8405 4772 50  0000 R CNN
+F 2 "" H 8400 4900 50  0001 C CNN
+F 3 "" H 8400 4900 50  0001 C CNN
+	1    8400 4900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 6095C31F
+P 4500 5400
+F 0 "#PWR010" H 4500 5150 50  0001 C CNN
+F 1 "GND" H 4505 5227 50  0000 C CNN
+F 2 "" H 4500 5400 50  0001 C CNN
+F 3 "" H 4500 5400 50  0001 C CNN
+	1    4500 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 6095C325
+P 4650 5400
+F 0 "R5" V 4443 5400 50  0000 C CNN
+F 1 "R_PullDown" V 4534 5400 50  0000 C CNN
+F 2 "" V 4580 5400 50  0001 C CNN
+F 3 "~" H 4650 5400 50  0001 C CNN
+	1    4650 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR015
+U 1 1 6095C32B
+P 5400 5400
+F 0 "#PWR015" H 5400 5250 50  0001 C CNN
+F 1 "+5V" H 5415 5573 50  0000 C CNN
+F 2 "" H 5400 5400 50  0001 C CNN
+F 3 "" H 5400 5400 50  0001 C CNN
+	1    5400 5400
+	0    1    1    0   
+$EndComp
+Text GLabel 4800 5100 0    50   Output ~ 0
+SW_Ent
+Wire Wire Line
+	5000 5400 4900 5400
+Wire Wire Line
+	4900 5400 4900 5100
+Wire Wire Line
+	4800 5100 4900 5100
+Wire Wire Line
+	4800 5400 4900 5400
+Connection ~ 4900 5400
+$Comp
+L Switch:SW_MEC_5E SW5
+U 1 1 6095C337
+P 5200 5500
+F 0 "SW5" H 5200 5885 50  0000 C CNN
+F 1 "SW_Ent" H 5200 5794 50  0000 C CNN
+F 2 "" H 5200 5800 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 5200 5800 50  0001 C CNN
+	1    5200 5500
+	1    0    0    -1  
+$EndComp
+Text GLabel 7800 3500 0    50   Input ~ 0
+SW_Ent
+$Comp
+L power:GND #PWR?
+U 1 1 60942301
+P 6100 3900
+F 0 "#PWR?" H 6100 3650 50  0001 C CNN
+F 1 "GND" V 6105 3772 50  0000 R CNN
+F 2 "" H 6100 3900 50  0001 C CNN
+F 3 "" H 6100 3900 50  0001 C CNN
+	1    6100 3900
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC
