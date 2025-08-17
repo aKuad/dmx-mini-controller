@@ -22,9 +22,9 @@ Schematic is below:
 
 ![Components](./images/components.webp)
 
-Next, upload firmware to arduino nano on the circuit.
+Next, upload firmware to Arduino nano on the circuit.
 
-Firmware source is in `DMX-MiniController_Arduino`. Open it by arduino IDE, then upload.
+Firmware source is in `DMX-MiniController_Arduino`. Open it by Arduino IDE, then upload.
 
 It's ready.
 
