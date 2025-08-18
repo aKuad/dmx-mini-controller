@@ -26,6 +26,10 @@ Next, upload firmware to Arduino nano on the circuit.
 
 Firmware source is in `DMX-MiniController_Arduino`. Open it by Arduino IDE, then upload.
 
+> [!NOTE]
+>
+> Actually, the source quality is not well (e.g. using many global variables). But I will not improve them. It's a memory of my old work.
+
 It's ready.
 
 ## Usage
