@@ -53,6 +53,14 @@ Example steps of set channel 4 value to 100:
 2. Rotate value knob, then set value 100
 3. Click Write switch
 
+## Other files in `archive`
+
+### old-reference
+
+I wrote a usage guide with LibreOffice writer for printing.
+
+`README.md` describing containing files in the directory (at that time, it was not a Git repository).
+
 ## License
 
 [CC0](./LICENSE)
