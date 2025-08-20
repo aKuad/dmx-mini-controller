@@ -55,6 +55,13 @@ Example steps of set channel 4 value to 100:
 
 ## Other files in `archive`
 
+### knob-model
+
+Knob part 3D model and drawing for value knob (variable resistor). But...
+
+- The drawing (Knob.pdf) has not enough dimensions
+- I can't remember the model number of variable resister
+
 ### old-reference
 
 I wrote a usage guide with LibreOffice writer for printing.
