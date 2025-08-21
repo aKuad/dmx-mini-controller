@@ -53,6 +53,16 @@ Example steps of set channel 4 value to 100:
 2. Rotate value knob, then set value 100
 3. Click Write switch
 
+By following the step, the LCD view will be below:
+
+![Usage step 1](./images/usage-step-1.webp)
+
+![Usage step 2](./images/usage-step-2.webp)
+
+![Usage step 3](./images/usage-step-3.webp)
+
+![Usage step 4](./images/usage-step-4.webp)
+
 ## Other files in `archive`
 
 ### knob-model
