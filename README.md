@@ -80,4 +80,4 @@ I wrote a usage guide with LibreOffice writer for printing.
 
 ## License
 
-[CC0](./LICENSE)
+[CC0-1.0](./LICENSE)
